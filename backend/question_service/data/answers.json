@@ -1,0 +1,217 @@
+{
+  "answers": [
+    {
+      "id": 1,
+      "question_id": 1,
+      "text_answer": "To plot $f(x) = e^x$, first note it is always above the $x$-axis because $e^x > 0$ for all real $x$. Mark the key point $(0, 1)$ since $e^0 = 1$. As $x \\to -\\infty$, $e^x \\to 0$, so the graph approaches (but never touches) the horizontal asymptote $y = 0$. As $x \\to \\infty$, $e^x \\to \\infty$ and the curve rises rapidly. The graph is smooth, strictly increasing, and concave up everywhere. Useful points: $(1, e)$ and $(2, e^2)$.",
+      "graph_answer_url": "/blob/sample-answer-images/sample-answer-1.jpg",
+      "ideal_answer_structure": [
+        "Identify the function as an exponential function $f(x)=e^x$.",
+        "Plot the reference point $f(0)=1$ and explain why it must be on the graph.",
+        "State positivity and monotonicity to determine that the curve stays above the $x$-axis and increases.",
+        "Describe end behaviour: $x \\to -\\infty$ gives a horizontal asymptote $y=0$, and $x \\to \\infty$ grows without bound.",
+        "Confirm shape (smooth, concave up) and add 1–2 extra points to anchor the sketch."
+      ],
+      "key_constraints_to_mention": [
+        "For all real $x$, $f(x)=e^x>0$ so the graph never crosses the $x$-axis.",
+        "$f(0)=e^0=1$ so $(0,1)$ is a mandatory point.",
+        "As $x \\to -\\infty$, $f(x) \\to 0$ so $y=0$ is a horizontal asymptote.",
+        "As $x$ increases, $f(x)$ increases exponentially and its growth rate accelerates."
+      ],
+      "created_at": "2025-11-06T00:00:00Z",
+      "updated_at": "2025-11-06T00:00:00Z"
+    },
+    {
+      "id": 2,
+      "question_id": 2,
+      "text_answer": "To plot $f(x)=\\sin(x)$, use one full period. Start at $(0,0)$ since $\\sin(0)=0$. The function reaches a maximum at $\\left(\\frac{\\pi}{2}, 1\\right)$, crosses again at $(\\pi,0)$, reaches a minimum at $\\left(\\frac{3\\pi}{2},-1\\right)$, and returns to $(2\\pi,0)$. The amplitude is $1$ and the period is $2\\pi$, so this pattern repeats every $2\\pi$. The curve is smooth and oscillatory, and it is odd-symmetric about the origin.",
+      "graph_answer_url": "/blob/sample-answer-images/sample-answer-3.png",
+      "ideal_answer_structure": [
+        "Identify the function $f(x)=\\sin(x)$ and state it is periodic.",
+        "State the amplitude and range to fix the vertical scale.",
+        "Mark the key points in one period: zeros, max, and min.",
+        "Sketch a smooth curve through these anchors.",
+        "State that the pattern repeats every $2\\pi$ to extend the graph."
+      ],
+      "key_constraints_to_mention": [
+        "Amplitude is $1$ and range is $[-1,1]$.",
+        "Period is $2\\pi$, so $\\sin(x+2\\pi)=\\sin(x)$.",
+        "Zeros occur at $x=n\\pi$ for any integer $n$.",
+        "Maxima $1$ occur at $x=\\frac{\\pi}{2}+2n\\pi$ and minima $-1$ occur at $x=\\frac{3\\pi}{2}+2n\\pi$."
+      ],
+      "created_at": "2025-11-06T00:00:00Z",
+      "updated_at": "2025-11-06T00:00:00Z"
+    },
+    {
+      "id": 3,
+      "question_id": 3,
+      "text_answer": "To plot $f(x)=e^x\\sin(x)$, start from $\\sin(x)$ oscillating between $-1$ and $1$. Multiplying by $e^x$ scales the oscillation amplitude by a factor $e^x$, so the envelope curves are $f(x)=\\pm e^x$. The function has zeros wherever $\\sin(x)=0$, i.e. at $x=n\\pi$, so it crosses the $x$-axis at those points (including $(0,0)$). For $x<0$, $e^x$ is small so oscillations shrink toward $0$ as $x \\to -\\infty$. For $x>0$, the oscillations grow rapidly as $x$ increases, staying bounded between $\\pm e^x$.",
+      "graph_answer_url": "/blob/sample-answer-images/sample-answer-4.png",
+      "ideal_answer_structure": [
+        "Identify the function as a product: $f(x)=e^x\\sin(x)$.",
+        "Recall the base behaviour of $\\sin(x)$ (oscillation, zeros).",
+        "Explain the scaling effect of multiplying by $e^x$ on amplitude.",
+        "Introduce and sketch the envelope curves $f(x)=\\pm e^x$.",
+        "Describe end behaviour as $x \\to -\\infty$ and $x \\to \\infty$ and place key zeros."
+      ],
+      "key_constraints_to_mention": [
+        "The graph is bounded by the envelopes $f(x)=e^x$ and $f(x)=-e^x$.",
+        "Zeros occur at $x=n\\pi$ for any integer $n$.",
+        "As $x \\to \\infty$, the magnitude grows like $e^x$ while still oscillating.",
+        "As $x \\to -\\infty$, the graph decays to $0$ while continuing to oscillate."
+      ],
+      "created_at": "2025-11-06T00:00:00Z",
+      "updated_at": "2025-11-06T00:00:00Z"
+    },
+    {
+      "id": 4,
+      "question_id": 4,
+      "text_answer": "To plot $f(x)=x\\cos(x)$, view it as an oscillation $\\cos(x)$ with an amplitude that grows linearly like $|x|$. The envelope curves are $f(x)=\\pm x$ for $x\\ge 0$ and $f(x)=\\pm(-x)$ for $x\\le 0$, i.e. $f(x)=\\pm|x|$. Zeros occur when $x=0$ or $\\cos(x)=0$, so at $x=0$ and $x=\\frac{\\pi}{2}+n\\pi$ for any integer $n$. The graph is even because $x\\cos(x)$ satisfies $f(-x)=f(x)$, so it is symmetric about the $y$-axis. Plot a few anchors: $(0,0)$, $(\\pi, -\\pi)$ since $\\cos(\\pi)=-1$, and $(2\\pi, 2\\pi)$ since $\\cos(2\\pi)=1$, then draw oscillations whose peaks follow $\\pm|x|$.",
+      "graph_answer_url": "/blob/sample-answer-images/sample-answer-5.png",
+      "ideal_answer_structure": [
+        "Identify $f(x)=x\\cos(x)$ as a product of a linear term and a bounded trig term.",
+        "State the envelope $|f(x)|\\le |x|$ and sketch the bounds $f(x)=\\pm|x|$.",
+        "Find zeros from $x\\cos(x)=0$ and mark them on the axis.",
+        "Use a few easy points where $\\cos(x)=\\pm1$ to anchor peaks/troughs (e.g. $x=0,\\pi,2\\pi$).",
+        "Use symmetry ($f$ even) to mirror the right-hand side to the left, then sketch smooth oscillations within the envelope."
+      ],
+      "key_constraints_to_mention": [
+        "Envelope: $-|x| \\le x\\cos(x) \\le |x|$ (bounded by $f(x)=\\pm|x|$).",
+        "Zeros: $x=0$ and $x=\\frac{\\pi}{2}+n\\pi$ for integers $n$.",
+        "Symmetry: $f(-x)=f(x)$ so the graph is even (symmetric about the $y$-axis).",
+        "Peak/trough values occur at $x=n\\pi$: $f(n\\pi)=n\\pi\\cos(n\\pi)=n\\pi(-1)^n$."
+      ],
+      "created_at": "2025-11-06T00:00:00Z",
+      "updated_at": "2025-11-06T00:00:00Z"
+    },
+    {
+      "id": 5,
+      "question_id": 5,
+      "text_answer": "To plot $f(x)=x\\sin(x)$, treat it as a sine wave whose amplitude grows like $|x|$. The envelope curves are $f(x)=\\pm|x|$ because $|x\\sin(x)|\\le |x|$. Zeros occur when $x=0$ or $\\sin(x)=0$, so at $x=0$ and $x=n\\pi$ for any integer $n$. The function is odd since $f(-x)=-f(x)$, so it has origin symmetry. Mark anchors such as $(\\pi,0)$, $(2\\pi,0)$, and peaks near where $\\sin(x)=\\pm1$, e.g. $f\\left(\\frac{\\pi}{2}\\right)=\\frac{\\pi}{2}$ and $f\\left(\\frac{3\\pi}{2}\\right)=-\\frac{3\\pi}{2}$. Then sketch smooth oscillations staying within $\\pm|x|$.",
+      "graph_answer_url": "/blob/sample-answer-images/sample-answer-6.png",
+      "ideal_answer_structure": [
+        "Identify $f(x)=x\\sin(x)$ as a product of an unbounded linear factor and bounded oscillation.",
+        "State the amplitude bound $|f(x)|\\le |x|$ and sketch the envelopes $f(x)=\\pm|x|$.",
+        "Find and mark zeros from $x\\sin(x)=0$.",
+        "Mark points where $\\sin(x)=\\pm1$ to locate large peaks/troughs (e.g. $x=\\frac{\\pi}{2},\\frac{3\\pi}{2}$).",
+        "Use odd symmetry to reflect the curve through the origin and draw smooth oscillations within the envelope."
+      ],
+      "key_constraints_to_mention": [
+        "Envelope: $-|x| \\le x\\sin(x) \\le |x|$ (bounded by $f(x)=\\pm|x|$).",
+        "Zeros: $x=0$ and $x=n\\pi$ for integers $n$.",
+        "Symmetry: $f(-x)=-f(x)$ so the graph is odd (symmetric about the origin).",
+        "Large peaks/troughs occur near $x=\\frac{\\pi}{2}+2n\\pi$ and $x=\\frac{3\\pi}{2}+2n\\pi$ with values approximately $\\pm|x|$ there."
+      ],
+      "created_at": "2025-11-06T00:00:00Z",
+      "updated_at": "2025-11-06T00:00:00Z"
+    },
+    {
+      "id": 6,
+      "question_id": 6,
+      "text_answer": "To plot $f(x)=\\cos(2x)e^{2x}$, start with $\\cos(2x)$: it oscillates between $-1$ and $1$ with period $\\pi$ (since $\\cos(2(x+\\pi))=\\cos(2x+2\\pi)=\\cos(2x)$). Multiplying by $e^{2x}$ scales the amplitude exponentially, so the envelope curves are $f(x)=\\pm e^{2x}$. Zeros occur when $\\cos(2x)=0$, i.e. $2x=\\frac{\\pi}{2}+n\\pi$, so $x=\\frac{\\pi}{4}+\\frac{n\\pi}{2}$. At $x=0$, the value is $f(0)=1\\cdot 1=1$. As $x\\to -\\infty$, $e^{2x}\\to 0$ so the oscillations decay to $0$; as $x\\to \\infty$, the oscillations grow rapidly while staying between $\\pm e^{2x}$.",
+      "graph_answer_url": "/blob/sample-answer-images/sample-answer-7.png",
+      "ideal_answer_structure": [
+        "Identify the function as $f(x)=e^{2x}\\cos(2x)$ and separate the roles of each factor.",
+        "State the oscillation properties of $\\cos(2x)$ (range and period).",
+        "Explain that multiplying by $e^{2x}$ scales the amplitude and gives envelopes $f(x)=\\pm e^{2x}$.",
+        "Find and mark zeros from $\\cos(2x)=0$ and anchor the point $f(0)=1$.",
+        "Describe behaviour as $x\\to -\\infty$ (decay) and $x\\to \\infty$ (growth), then sketch within the envelopes."
+      ],
+      "key_constraints_to_mention": [
+        "Envelopes: $-e^{2x} \\le f(x) \\le e^{2x}$ where $f(x)=e^{2x}\\cos(2x)$.",
+        "Period of $\\cos(2x)$ is $\\pi$.",
+        "Zeros: $x=\\frac{\\pi}{4}+\\frac{n\\pi}{2}$ for integers $n$.",
+        "End behaviour: $f(x)\\to 0$ as $x\\to -\\infty$ and grows exponentially in magnitude as $x\\to \\infty$."
+      ],
+      "created_at": "2025-11-06T00:00:00Z",
+      "updated_at": "2025-11-06T00:00:00Z"
+    },
+    {
+      "id": 7,
+      "question_id": 7,
+      "text_answer": "To plot $f(x)=\\cos(x)$, use the standard cosine wave. Start at $(0,1)$ since $\\cos(0)=1$. It crosses the $x$-axis at $\\left(\\frac{\\pi}{2},0\\right)$, reaches a minimum at $(\\pi,-1)$, crosses again at $\\left(\\frac{3\\pi}{2},0\\right)$, and returns to $(2\\pi,1)$. The amplitude is $1$, the range is $[-1,1]$, and the period is $2\\pi$, so the pattern repeats every $2\\pi$. The function is even, so the graph is symmetric about the $y$-axis.",
+      "graph_answer_url": "/blob/sample-answer-images/sample-answer-8.png",
+      "ideal_answer_structure": [
+        "Identify the function $f(x)=\\cos(x)$ and state it is periodic.",
+        "State amplitude and range to fix vertical scale.",
+        "Mark the key points over one period: start, zeros, minimum, return point.",
+        "Sketch a smooth curve through those anchors.",
+        "Use period $2\\pi$ and even symmetry to extend the sketch."
+      ],
+      "key_constraints_to_mention": [
+        "Amplitude is $1$ and range is $[-1,1]$.",
+        "Period is $2\\pi$, so $\\cos(x+2\\pi)=\\cos(x)$.",
+        "Zeros occur at $x=\\frac{\\pi}{2}+n\\pi$ for integers $n$.",
+        "Symmetry: $\\cos(-x)=\\cos(x)$ so the graph is even (symmetric about the $y$-axis)."
+      ],
+      "created_at": "2025-11-06T00:00:00Z",
+      "updated_at": "2025-11-06T00:00:00Z"
+    },
+    {
+      "id": 8,
+      "question_id": 8,
+      "text_answer": "Let the water height be $h(t)$ in a tank of constant base area $A_0$. The outflow speed from a small hole is given by Torricelli's law: $v=\\sqrt{2gh}$, so the volumetric flow rate is $Q=A_1 v=A_1\\sqrt{2gh}$. The tank volume is $V=A_0 h$, hence $\\frac{dV}{dt}=A_0\\frac{dh}{dt}=-Q=-A_1\\sqrt{2gh}$. Therefore $A_0\\frac{dh}{dt}=-A_1\\sqrt{2g}\\,\\sqrt{h}$. Separate variables: $\\frac{dh}{\\sqrt{h}}=-\\frac{A_1}{A_0}\\sqrt{2g}\\,dt$. Integrate from $h(0)=h_0$ to $h(T)=0$: $\\int_{h_0}^{0} h^{-1/2}\\,dh=-\\frac{A_1}{A_0}\\sqrt{2g}\\int_0^{T} dt$. This gives $-2\\sqrt{h_0}=-\\frac{A_1}{A_0}\\sqrt{2g}\\,T$, so the drain time is $T=\\frac{2A_0}{A_1\\sqrt{2g}}\\sqrt{h_0}$.",
+      "graph_answer_url": "/blob/sample-answer-images/sample-answer-2.png",
+      "ideal_answer_structure": [
+        "Define the state variable $h(t)$ and relate volume to height via $V=A_0h$.",
+        "Use Torricelli's law to express outflow speed $v=\\sqrt{2gh}$ and flow rate $Q=A_1v$.",
+        "Write the conservation equation $\\frac{dV}{dt}=-Q$ to obtain an ODE for $h(t)$.",
+        "Separate variables and integrate using initial condition $h(0)=h_0$ and final condition $h(T)=0$.",
+        "Solve explicitly for $T$ and present the final expression in simplest form."
+      ],
+      "key_constraints_to_mention": [
+        "Tank volume: $V=A_0h$ (constant cross-sectional area).",
+        "Outflow rate: $Q=A_1\\sqrt{2gh}$ (Torricelli's law for a small orifice).",
+        "Governing ODE: $A_0\\frac{dh}{dt}=-A_1\\sqrt{2g}\\,\\sqrt{h}$.",
+        "Drain time: $T=\\frac{2A_0}{A_1\\sqrt{2g}}\\sqrt{h_0}$."
+      ],
+      "created_at": "2025-11-06T00:00:00Z",
+      "updated_at": "2025-11-06T00:00:00Z"
+    },
+    {
+      "id": 9,
+      "question_id": 10,
+      "text_answer": "1) Reduce the right-hand ladder first.\n\nFor the rightmost boxed section (label it $R_1$): it is a vertical $1\\Omega$ to ground in parallel with a series path of $1\\Omega+1\\Omega$ to ground.\n\\[\n\\frac{1}{R_1}=\\frac{1}{1+1}+\\frac{1}{1}=\\frac{1}{2}+1=\\frac{3}{2}\n\\Rightarrow\\quad R_1=\\frac{2}{3}\\,\\Omega.\n\\]\n\n2) Now include the next stage seen from the node to the right of $V_x$ (label the overall right-hand equivalent to ground as $R_2$): a vertical $1\\Omega$ to ground in parallel with a path of $1\\Omega+R_1$.\n\\[\n\\frac{1}{R_2}=\\frac{1}{1}+\\frac{1}{1+R_1}=1+\\frac{1}{1+\\frac{2}{3}}=1+\\frac{1}{\\frac{5}{3}}=1+\\frac{3}{5}=\\frac{8}{5}\n\\Rightarrow\\quad R_2=\\frac{5}{8}\\,\\Omega.\n\\]\n\n3) The source sees a total resistance\n\\[\nR=1\\Omega+R_2=1+\\frac{5}{8}=\\frac{13}{8}\\,\\Omega.\n\\]\nSo the circuit current is\n\\[\nI=\\frac{V}{R}=\\frac{1}{13/8}=\\frac{8}{13}\\,\\text{A}.\n\\]\n\n4) The node $V_x$ is after the leftmost $1\\Omega$ resistor, so\n\\[\nV_x=1-I\\cdot 1=1-\\frac{8}{13}=\\frac{5}{13}\\,\\text{V}\\approx 0.385\\,\\text{V}.\n\\]\nTherefore $\\boxed{V_x=\\frac{5}{13}\\,\\text{V}}$.",
+      "graph_answer_url": "/blob/sample-answer-images/sample-answer-9.png",
+      "ideal_answer_structure": [
+        "Form an equivalent resistance for the rightmost ladder section: $R_1=1\\parallel(1+1)=2/3\\,\\Omega$.",
+        "Form the equivalent to ground seen to the right of $V_x$: $R_2=1\\parallel(1+R_1)=5/8\\,\\Omega$.",
+        "Compute total resistance seen by the source: $R=1+R_2=13/8\\,\\Omega$.",
+        "Compute current: $I=1/R=8/13\\,\\text{A}$.",
+        "Use the voltage drop across the left $1\\Omega$ resistor: $V_x=1-I(1)=5/13\\,\\text{V}$."
+      ],
+      "key_constraints_to_mention": [
+        "All resistors are $1\\Omega$ and the bottom rail is ground (0 V).",
+        "Use series + parallel reduction from right to left.",
+        "Equivalent resistances: $R_1=2/3\\,\\Omega$, $R_2=5/8\\,\\Omega$.",
+        "Total resistance: $R=13/8\\,\\Omega$, current: $I=8/13\\,\\text{A}$.",
+        "Final node voltage: $V_x=5/13\\,\\text{V}\\approx 0.385\\,\\text{V}$."
+      ],
+      "created_at": "2026-01-24T00:00:00Z",
+      "updated_at": "2026-01-24T00:00:00Z"
+    },
+    {
+      "id": 10,
+      "question_id": 11,
+      "text_answer": "1) Assume at time $t$ the rocket has mass $m$ and velocity $v$, so momentum is $p_1=mv$.\n\n2) A small time step $\\delta t$ later, the rocket ejects a small mass $\\delta m$ of fuel. Take positive direction to the right. The rocket mass becomes $m+\\delta m$ and its velocity becomes $v+\\delta v$.\n\nMomentum after ejection:\n\\[\np_2=(m+\\delta m)(v+\\delta v)+(-\\delta m)\\,v_e.\n\\]\nLet the exhaust velocity relative to the rocket be $v_e'=-100\\,\\text{m/s}$ (fuel ejected backwards). Then the exhaust velocity in the inertial frame is\n\\[\nv_e=v_e'+(v+\\delta v).\n\\]\nSubstitute:\n\\[\np_2=(m+\\delta m)(v+\\delta v)-\\delta m\\,(v_e'+v+\\delta v).\n\\]\nExpand and drop the second-order term $\\delta m\\,\\delta v$:\n\\[\np_2=mv+m\\,\\delta v-\\delta m\\,v_e'.\n\\]\nConservation of momentum gives $p_1=p_2$:\n\\[\nmv=mv+m\\,\\delta v-\\delta m\\,v_e'\\quad\\Rightarrow\\quad m\\,\\delta v=\\delta m\\,v_e'.\n\\]\nTake the limit to differentials:\n\\[\nm\\,dv=v_e'\\,dm.\n\\]\nIntegrate from $v=0$ to $v=v_f$, and from $m=1000$ kg to $m=500$ kg:\n\\[\n\\int_0^{v_f} dv=v_e'\\int_{1000}^{500}\\frac{1}{m}\\,dm\n\\Rightarrow\\quad\nv_f=v_e'\\,[\\ln m]_{1000}^{500}=v_e'(\\ln 500-\\ln 1000)=v_e'\\ln\\left(\\frac{1}{2}\\right).\n\\]\nWith $v_e'=-100\\,\\text{m/s}$:\n\\[\nv_f=-100\\ln\\left(\\frac{1}{2}\\right)=100\\ln 2\\approx 69.3\\,\\text{m/s}\\approx 250\\,\\text{km/h}.\n\\]\nSo the rocket speed when all fuel is used is $\\boxed{69.3\\,\\text{m/s}}$.",
+      "graph_answer_url": "/blob/sample-answer-images/sample-answer-10.png",
+      "ideal_answer_structure": [
+        "Assume at time $t$: rocket mass $m$, velocity $v$, momentum $p_1=mv$.",
+        "After $\\delta t$: rocket mass $m+\\delta m$, velocity $v+\\delta v$; ejected mass is $-\\delta m$.",
+        "Write momentum after ejection $p_2=(m+\\delta m)(v+\\delta v)-\\delta m(v_e'+v+\\delta v)$ with $v_e'=-100\\,\\text{m/s}$.",
+        "Expand, neglect $\\delta m\\,\\delta v$, set $p_1=p_2$ to get $m\\,dv=v_e'\\,dm$.",
+        "Integrate $\\int_0^{v_f}dv=v_e'\\int_{1000}^{500}\\frac{1}{m}dm$ and compute $v_f=100\\ln 2$."
+      ],
+      "key_constraints_to_mention": [
+        "Initial total mass: $m_0=500+500=1000\\,\\text{kg}$.",
+        "Final mass after fuel used: $m_f=500\\,\\text{kg}$.",
+        "Fuel ejection speed relative to rocket: $v_e'=-100\\,\\text{m/s}$ (backwards).",
+        "Momentum conservation: $p_1=p_2$ in deep space (no external forces).",
+        "Neglect second-order term $\\delta m\\,\\delta v$ when expanding.",
+        "Final result: $v_f=100\\ln 2\\approx 69.3\\,\\text{m/s}$."
+      ],
+      "created_at": "2026-01-24T00:00:00Z",
+      "updated_at": "2026-01-24T00:00:00Z"
+    }
+  ]
+}

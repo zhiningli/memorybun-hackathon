@@ -1,0 +1,484 @@
+{
+  "rubrics": [
+    {
+      "id": 1,
+      "name": "General Rubrics",
+      "description": "General rubric for evaluating standard engineering and physics problem-solving responses",
+      "dimensions": [
+        {
+          "name": "Problem Framing",
+          "description": "Ability to correctly interpret the question, identify the relevant topic or principle, establish appropriate assumptions and reference conventions, and articulate an initial qualitative expectation before proceeding to detailed solution steps.",
+          "weight": 0.25,
+          "criterias": [
+            {
+              "name": "Correct identification of the task",
+              "description": "What is being asked",
+              "scoring_condition": "Clearly paraphrases the question in a way that correctly identifies the goal"
+            },
+            {
+              "name": "Recognition of relevant topic/principle",
+              "description": "Which physics/engineering domain applies",
+              "scoring_condition": "The student correctly identifies the relevant topic or governing principle"
+            },
+            {
+              "name": "Stating simplifying assumptions",
+              "description": "What is being or what should be idealised or neglected",
+              "scoring_condition": "At least one reasonable simplifying assumption is explicitly stated"
+            },
+            {
+              "name": "Reference frame / sign convention",
+              "description": "How quantities are defined (e.g. coordinate system, radian convention)",
+              "scoring_condition": "A coordinate system, direction, sign convention, or reference point is clearly defined AND used consistently"
+            },
+            {
+              "name": "Early qualitative expectation",
+              "description": "What behaviour is anticipated",
+              "scoring_condition": "The student states a qualitative expectation about behaviour, trend, or sign"
+            }
+          ]
+        },
+        {
+          "name": "Solution Execution",
+          "description": "Ability to set up equations, apply relevant principles, and progress through the solution in a clear, logically ordered manner.",
+          "weight": 0.25,
+          "criterias": [
+            {
+              "name": "Correct equation setup",
+              "description": "Governing equations correctly represent the problem",
+              "scoring_condition": "The student writes down equations that correctly follow from the identified principles and assumptions"
+            },
+            {
+              "name": "Logical progression of steps",
+              "description": "Solution proceeds in a coherent order",
+              "scoring_condition": "Steps follow a logical sequence without unexplained jumps"
+            },
+            {
+              "name": "Use of intermediate results",
+              "description": "Intermediate quantities are derived and used appropriately",
+              "scoring_condition": "No step contradicts previously stated assumptions"
+            },
+            {
+              "name": "Consistent application of assumptions",
+              "description": "Assumptions are respected throughout the solution",
+              "scoring_condition": "No step contradicts previously stated assumptions"
+            },
+            {
+              "name": "Completion of solution method",
+              "description": "Method reaches a resolvable form",
+              "scoring_condition": "The student reaches a solvable equation or final expression"
+            }
+          ]
+        },
+        {
+          "name": "Technical Correctness",
+          "description": "Correctness of equations, algebra, units, and final results, allowing for minor non-fatal slips that do not undermine the overall approach.",
+          "weight": 0.25,
+          "criterias": [
+            {
+              "name": "Correct equations",
+              "description": "Mathematical expressions are correct",
+              "scoring_condition": "Equations are dimensionally and conceptually correct"
+            },
+            {
+              "name": "Algebraic accuracy",
+              "description": "Manipulations are carried out correctly",
+              "scoring_condition": "No major algebraic or sign errors are present"
+            },
+            {
+              "name": "Unit consistency",
+              "description": "Physical units are treated consistently",
+              "scoring_condition": "Units are correct or internally consistent throughout"
+            },
+            {
+              "name": "Correct final result",
+              "description": "Final answer matches the method",
+              "scoring_condition": "The final result follows logically from previous steps"
+            },
+            {
+              "name": "Error severity",
+              "description": "Impact of mistakes on solution",
+              "scoring_condition": "Any errors present do not invalidate the overall approach"
+            }
+          ]
+        },
+        {
+          "name": "Communication & Whiteboard Use",
+          "description": "Clarity of verbal explanation and effective use of the online whiteboard (diagrams, labels, readable working) to externalise and support reasoning.",
+          "weight": 0.15,
+          "criterias": [
+            {
+              "name": "Verbal clarity",
+              "description": "Spoken explanation is understandable",
+              "scoring_condition": "The interviewer can follow the reasoning without repeated clarification"
+            },
+            {
+              "name": "Structured explanation",
+              "description": "Ideas are presented in an organised manner",
+              "scoring_condition": "The student uses clear sequencing (e.g. 'first\u2026 then\u2026')"
+            },
+            {
+              "name": "Diagrammatic support",
+              "description": "Diagrams aid understanding",
+              "scoring_condition": "Relevant diagrams or sketches are drawn where appropriate"
+            },
+            {
+              "name": "Labeling and notation",
+              "description": "Whiteboard content is readable",
+              "scoring_condition": "Variables, axes, and diagrams are clearly labelled"
+            },
+            {
+              "name": "Alignment of speech and writing",
+              "description": "Speech matches written work",
+              "scoring_condition": "Verbal explanation corresponds to what is written on the whiteboard"
+            }
+          ]
+        },
+        {
+          "name": "Time Management",
+          "description": "Ability to engage promptly, maintain steady progress without long stalls, prioritise key steps, and reach a meaningful conclusion within the available time.",
+          "weight": 0.1,
+          "criterias": [
+            {
+              "name": "Prompt engagement",
+              "description": "Speed of initial response",
+              "scoring_condition": "The student begins framing or solving within a short time window"
+            },
+            {
+              "name": "Steady progress",
+              "description": "Avoidance of long stalls",
+              "scoring_condition": "No prolonged pauses without productive activity"
+            },
+            {
+              "name": "Prioritisation",
+              "description": "Focus on key steps",
+              "scoring_condition": "Core steps are attempted before secondary details"
+            },
+            {
+              "name": "Awareness of time",
+              "description": "Time is managed consciously",
+              "scoring_condition": "The student adjusts pace when time is limited"
+            },
+            {
+              "name": "Meaningful conclusion",
+              "description": "Solution reaches a stopping point",
+              "scoring_condition": "A result, partial result, or clear summary is reached"
+            }
+          ]
+        }
+      ],
+      "version": 1,
+      "created_at": "2025-11-06T00:00:00Z",
+      "updated_at": "2025-11-06T00:00:00Z"
+    },
+    {
+      "id": 2,
+      "name": "Graph Plotting Rubrics",
+      "description": "Specialized rubric for evaluating graph plotting and mathematical visualization questions",
+      "dimensions": [
+        {
+          "name": "Problem Framing",
+          "description": "Ability to correctly interpret the question, identify the relevant topic or principle, establish appropriate assumptions and reference conventions, and articulate an initial qualitative expectation before proceeding to detailed solution steps.",
+          "weight": 0.25,
+          "criterias": [
+            {
+              "name": "Correct identification of the task",
+              "description": "What is being asked",
+              "scoring_condition": "Clearly paraphrases the question in a way that correctly identifies the goal"
+            },
+            {
+              "name": "Reference frame / sign convention",
+              "description": "How quantities are defined (e.g. coordinate system, radian convention)",
+              "scoring_condition": "A coordinate system, direction, sign convention, or reference point is clearly defined AND used consistently"
+            },
+            {
+              "name": "Early qualitative expectation",
+              "description": "What behaviour is anticipated",
+              "scoring_condition": "The student states a qualitative expectation about behaviour, trend, or sign"
+            }
+          ]
+        },
+        {
+          "name": "Solution Execution",
+          "description": "Ability to set up equations, apply relevant principles, and progress through the solution in a clear, logically ordered manner.",
+          "weight": 0.25,
+          "criterias": [
+            {
+              "name": "Correct equation setup",
+              "description": "Governing equations correctly represent the problem",
+              "scoring_condition": "The student writes down equations that correctly follow from the identified principles and assumptions"
+            },
+            {
+              "name": "Logical progression of steps",
+              "description": "Solution proceeds in a coherent order",
+              "scoring_condition": "Steps follow a logical sequence without unexplained jumps"
+            },
+            {
+              "name": "Use of intermediate results",
+              "description": "Intermediate quantities are derived and used appropriately",
+              "scoring_condition": "No step contradicts previously stated assumptions"
+            }
+          ]
+        },
+        {
+          "name": "Technical Correctness",
+          "description": "Correctness of equations, algebra, units, and final results, allowing for minor non-fatal slips that do not undermine the overall approach.",
+          "weight": 0.25,
+          "criterias": [
+            {
+              "name": "Algebraic accuracy",
+              "description": "Manipulations are carried out correctly",
+              "scoring_condition": "No major algebraic or sign errors are present"
+            },
+            {
+              "name": "Unit consistency",
+              "description": "Physical units are treated consistently",
+              "scoring_condition": "Units are correct or internally consistent throughout"
+            },
+            {
+              "name": "Correct final result",
+              "description": "Final answer matches the method",
+              "scoring_condition": "The final result follows logically from previous steps"
+            },
+            {
+              "name": "Error severity",
+              "description": "Impact of mistakes on solution",
+              "scoring_condition": "Any errors present do not invalidate the overall approach"
+            }
+          ]
+        },
+        {
+          "name": "Communication & Whiteboard Use",
+          "description": "Clarity of verbal explanation and effective use of the online whiteboard (diagrams, labels, readable working) to externalise and support reasoning.",
+          "weight": 0.15,
+          "criterias": [
+            {
+              "name": "Verbal clarity",
+              "description": "Spoken explanation is understandable",
+              "scoring_condition": "The interviewer can follow the reasoning without repeated clarification"
+            },
+            {
+              "name": "Structured explanation",
+              "description": "Ideas are presented in an organised manner",
+              "scoring_condition": "The student uses clear sequencing (e.g. 'first\u2026 then\u2026')"
+            },
+            {
+              "name": "Diagrammatic support",
+              "description": "Diagrams aid understanding",
+              "scoring_condition": "Relevant diagrams or sketches are drawn where appropriate"
+            },
+            {
+              "name": "Labeling and notation",
+              "description": "Whiteboard content is readable",
+              "scoring_condition": "Variables, axes, and diagrams are clearly labelled"
+            },
+            {
+              "name": "Alignment of speech and writing",
+              "description": "Speech matches written work",
+              "scoring_condition": "Verbal explanation corresponds to what is written on the whiteboard"
+            }
+          ]
+        },
+        {
+          "name": "Time Management",
+          "description": "Ability to engage promptly, maintain steady progress without long stalls, prioritise key steps, and reach a meaningful conclusion within the available time.",
+          "weight": 0.1,
+          "criterias": [
+            {
+              "name": "Prompt engagement",
+              "description": "Speed of initial response",
+              "scoring_condition": "The student begins framing or solving within a short time window"
+            },
+            {
+              "name": "Steady progress",
+              "description": "Avoidance of long stalls",
+              "scoring_condition": "No prolonged pauses without productive activity"
+            },
+            {
+              "name": "Prioritisation",
+              "description": "Focus on key steps",
+              "scoring_condition": "Core steps are attempted before secondary details"
+            },
+            {
+              "name": "Awareness of time",
+              "description": "Time is managed consciously",
+              "scoring_condition": "The student adjusts pace when time is limited"
+            },
+            {
+              "name": "Meaningful conclusion",
+              "description": "Solution reaches a stopping point",
+              "scoring_condition": "A result, partial result, or clear summary is reached"
+            }
+          ]
+        }
+      ],
+      "version": 1,
+      "created_at": "2025-11-06T00:00:00Z",
+      "updated_at": "2025-11-06T00:00:00Z"
+    },
+    {
+      "id": 3,
+      "name": "Fluid Dynamics Rubrics",
+      "description": "Specialized rubric for evaluating fluid dynamics and thermodynamics questions",
+      "dimensions": [
+        {
+          "name": "Problem Framing",
+          "description": "Ability to correctly interpret the question, identify the relevant topic or principle, establish appropriate assumptions and reference conventions, and articulate an initial qualitative expectation before proceeding to detailed solution steps.",
+          "weight": 0.25,
+          "criterias": [
+            {
+              "name": "Correct identification of the task",
+              "description": "What is being asked",
+              "scoring_condition": "Clearly paraphrases the question in a way that correctly identifies the goal"
+            },
+            {
+              "name": "Recognition of relevant topic/principle",
+              "description": "Which physics/engineering domain applies",
+              "scoring_condition": "The student correctly identifies the relevant topic or governing principle"
+            },
+            {
+              "name": "Stating simplifying assumptions",
+              "description": "What is being or what should be idealised or neglected",
+              "scoring_condition": "At least one reasonable simplifying assumption is explicitly stated"
+            },
+            {
+              "name": "Early qualitative expectation",
+              "description": "What behaviour is anticipated",
+              "scoring_condition": "The student states a qualitative expectation about behaviour, trend, or sign"
+            }
+          ]
+        },
+        {
+          "name": "Solution Execution",
+          "description": "Ability to set up equations, apply relevant principles, and progress through the solution in a clear, logically ordered manner.",
+          "weight": 0.25,
+          "criterias": [
+            {
+              "name": "Correct equation setup",
+              "description": "Governing equations correctly represent the problem",
+              "scoring_condition": "The student writes down equations that correctly follow from the identified principles and assumptions"
+            },
+            {
+              "name": "Logical progression of steps",
+              "description": "Solution proceeds in a coherent order",
+              "scoring_condition": "Steps follow a logical sequence without unexplained jumps"
+            },
+            {
+              "name": "Use of intermediate results",
+              "description": "Intermediate quantities are derived and used appropriately",
+              "scoring_condition": "No step contradicts previously stated assumptions"
+            },
+            {
+              "name": "Consistent application of assumptions",
+              "description": "Assumptions are respected throughout the solution",
+              "scoring_condition": "No step contradicts previously stated assumptions"
+            },
+            {
+              "name": "Completion of solution method",
+              "description": "Method reaches a resolvable form",
+              "scoring_condition": "The student reaches a solvable equation or final expression"
+            }
+          ]
+        },
+        {
+          "name": "Technical Correctness",
+          "description": "Correctness of equations, algebra, units, and final results, allowing for minor non-fatal slips that do not undermine the overall approach.",
+          "weight": 0.25,
+          "criterias": [
+            {
+              "name": "Correct equations",
+              "description": "Mathematical expressions are correct",
+              "scoring_condition": "Equations are dimensionally and conceptually correct"
+            },
+            {
+              "name": "Algebraic accuracy",
+              "description": "Manipulations are carried out correctly",
+              "scoring_condition": "No major algebraic or sign errors are present"
+            },
+            {
+              "name": "Unit consistency",
+              "description": "Physical units are treated consistently",
+              "scoring_condition": "Units are correct or internally consistent throughout"
+            },
+            {
+              "name": "Correct final result",
+              "description": "Final answer matches the method",
+              "scoring_condition": "The final result follows logically from previous steps"
+            },
+            {
+              "name": "Error severity",
+              "description": "Impact of mistakes on solution",
+              "scoring_condition": "Any errors present do not invalidate the overall approach"
+            }
+          ]
+        },
+        {
+          "name": "Communication & Whiteboard Use",
+          "description": "Clarity of verbal explanation and effective use of the online whiteboard (diagrams, labels, readable working) to externalise and support reasoning.",
+          "weight": 0.15,
+          "criterias": [
+            {
+              "name": "Verbal clarity",
+              "description": "Spoken explanation is understandable",
+              "scoring_condition": "The interviewer can follow the reasoning without repeated clarification"
+            },
+            {
+              "name": "Structured explanation",
+              "description": "Ideas are presented in an organised manner",
+              "scoring_condition": "The student uses clear sequencing (e.g. 'first\u2026 then\u2026')"
+            },
+            {
+              "name": "Diagrammatic support",
+              "description": "Diagrams aid understanding",
+              "scoring_condition": "Relevant diagrams or sketches are drawn where appropriate"
+            },
+            {
+              "name": "Labeling and notation",
+              "description": "Whiteboard content is readable",
+              "scoring_condition": "Variables, axes, and diagrams are clearly labelled"
+            },
+            {
+              "name": "Alignment of speech and writing",
+              "description": "Speech matches written work",
+              "scoring_condition": "Verbal explanation corresponds to what is written on the whiteboard"
+            }
+          ]
+        },
+        {
+          "name": "Time Management",
+          "description": "Ability to engage promptly, maintain steady progress without long stalls, prioritise key steps, and reach a meaningful conclusion within the available time.",
+          "weight": 0.1,
+          "criterias": [
+            {
+              "name": "Prompt engagement",
+              "description": "Speed of initial response",
+              "scoring_condition": "The student begins framing or solving within a short time window"
+            },
+            {
+              "name": "Steady progress",
+              "description": "Avoidance of long stalls",
+              "scoring_condition": "No prolonged pauses without productive activity"
+            },
+            {
+              "name": "Prioritisation",
+              "description": "Focus on key steps",
+              "scoring_condition": "Core steps are attempted before secondary details"
+            },
+            {
+              "name": "Awareness of time",
+              "description": "Time is managed consciously",
+              "scoring_condition": "The student adjusts pace when time is limited"
+            },
+            {
+              "name": "Meaningful conclusion",
+              "description": "Solution reaches a stopping point",
+              "scoring_condition": "A result, partial result, or clear summary is reached"
+            }
+          ]
+        }
+      ],
+      "version": 1,
+      "created_at": "2025-11-06T00:00:00Z",
+      "updated_at": "2025-11-06T00:00:00Z"
+    }
+  ]
+}

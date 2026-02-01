@@ -1,0 +1,36 @@
+# =============================================
+# Requirements for Transcription Service
+# =============================================
+# NOTE: torch and torchaudio are installed FIRST in Dockerfile
+# using CPU-only versions from PyTorch's CPU index (~2GB savings).
+# Whisper will use these pre-installed versions.
+
+# Web Framework
+fastapi==0.115.0
+uvicorn[standard]==0.32.0
+pydantic==2.9.2
+pydantic-settings==2.6.0
+python-multipart==0.0.12
+
+# Audio Transcription
+faster-whisper>=1.0.0  # CTranslate2-based Whisper (4x faster, 4x less memory)
+pydub>=0.25.1  # Audio file chunking (requires ffmpeg)
+
+# Storage
+boto3>=1.34.0  # AWS SDK for S3 storage
+aiofiles>=23.0.0  # Async file I/O for local storage
+
+# Redis
+redis[hiredis]==5.0.1  # Redis async client with hiredis parser
+
+# Rate Limiting
+slowapi>=0.1.9
+
+# Observability
+prometheus-fastapi-instrumentator>=7.0.0
+
+# Testing
+pytest==8.3.3
+pytest-asyncio==0.24.0
+pytest-cov==5.0.0
+httpx==0.27.2

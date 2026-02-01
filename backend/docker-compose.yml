@@ -1,0 +1,205 @@
+services:
+  # ==================== Infrastructure ====================
+  redis:
+    image: redis:7-alpine
+    container_name: memorybun-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    command: redis-server --appendonly yes
+    healthcheck:
+      test: [ "CMD", "redis-cli", "ping" ]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    networks:
+      - memorybun-network
+
+  postgres:
+    image: postgres:15-alpine
+    container_name: memorybun-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=memorybun
+      - POSTGRES_PASSWORD=memorybun_dev
+      - POSTGRES_DB=memorybun
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U memorybun" ]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    networks:
+      - memorybun-network
+
+  # ==================== Microservices ====================
+  question-service:
+    build:
+      context: ./question_service
+      dockerfile: Dockerfile
+    container_name: memorybun-question-service
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+      # Pass-through host env vars if set (optional)
+      - DATA_DIR=${DATA_DIR:-data}
+    healthcheck:
+      test: [ "CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')" ]
+      interval: 60s
+      timeout: 10s
+      start_period: 10s
+      retries: 3
+    networks:
+      - memorybun-network
+    restart: unless-stopped
+
+  transcription-service:
+    build:
+      context: ./transcription_service
+      dockerfile: Dockerfile
+    container_name: memorybun-transcription-service
+    ports:
+      - "8001:8001"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - REDIS_URL=${REDIS_URL:-redis://redis:6379/0}
+      - WHISPER_PRELOAD_MODEL=${WHISPER_PRELOAD_MODEL:-base}
+      - STORAGE_TYPE=${STORAGE_TYPE:-FILESYSTEM}
+    volumes:
+      - transcription-screenshots:/app/data/screenshots
+      - transcription-audio:/app/data/audio_chunks
+    depends_on:
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: [ "CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8001/health')" ]
+      interval: 60s
+      timeout: 10s
+      start_period: 60s # Longer due to Whisper model loading
+      retries: 3
+    networks:
+      - memorybun-network
+    restart: unless-stopped
+
+  grading-service:
+    build:
+      context: ./grading_service
+      dockerfile: Dockerfile
+    container_name: memorybun-grading-service
+    ports:
+      - "8002:8002"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - REDIS_URL=${REDIS_URL:-redis://redis:6379/0}
+      - QUESTION_SERVICE_URL=${QUESTION_SERVICE_URL:-http://question-service:8000}
+      - TRANSCRIPTION_SERVICE_URL=${TRANSCRIPTION_SERVICE_URL:-http://transcription-service:8001}
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - LLM_PROVIDER=${LLM_PROVIDER:-gemini}
+      - MOCK_LLM_RESPONSE=${MOCK_LLM_RESPONSE:-False}
+    depends_on:
+      redis:
+        condition: service_healthy
+      question-service:
+        condition: service_started
+      transcription-service:
+        condition: service_started
+    healthcheck:
+      test: [ "CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8002/health')" ]
+      interval: 60s
+      timeout: 10s
+      start_period: 10s
+      retries: 3
+    networks:
+      - memorybun-network
+    restart: unless-stopped
+  # ==================== User Service (Disabled - Missing Dockerfile) ====================
+  # Uncomment below once Dockerfile is created for user_service
+  # user-service:
+  #   build:
+  #     context: ./user_service
+  #     dockerfile: Dockerfile
+  #   container_name: memorybun-user-service
+  #   ports:
+  #     - "8003:8003"
+  #   environment:
+  #     - PYTHONUNBUFFERED=1
+  #     - DATABASE_URL=postgresql+asyncpg://memorybun:memorybun_dev@postgres:5432/memorybun
+  #     - REDIS_URL=${REDIS_URL:-redis://redis:6379/0}
+  #     - FRONTEND_URL=${FRONTEND_URL:-http://localhost:3000}
+  #     - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID:-}
+  #     - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET:-}
+  #     - JWT_SECRET_KEY=${JWT_SECRET_KEY:-dev-jwt-secret-change-in-production}
+  #   depends_on:
+  #     postgres:
+  #       condition: service_healthy
+  #     redis:
+  #       condition: service_healthy
+  #   healthcheck:
+  #     test: [ "CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8003/health')" ]
+  #     interval: 60s
+  #     timeout: 10s
+  #     start_period: 10s
+  #     retries: 3
+  #   networks:
+  #     - memorybun-network
+  #   restart: unless-stopped
+  # ==================== Monitoring (Disabled for MVP) ====================
+  # Using AWS CloudWatch for production monitoring instead
+  # Uncomment below to enable local Prometheus + Grafana
+
+  # prometheus:
+  #   image: prom/prometheus:latest
+  #   container_name: memorybun-prometheus
+  #   ports:
+  #     - "9090:9090"
+  #   volumes:
+  #     - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+  #     - prometheus-data:/prometheus
+  #   command:
+  #     - '--config.file=/etc/prometheus/prometheus.yml'
+  #     - '--storage.tsdb.path=/prometheus'
+  #     - '--storage.tsdb.retention.time=7d'
+  #   networks:
+  #     - memorybun-network
+  #   restart: unless-stopped
+
+  # grafana:
+  #   image: grafana/grafana:latest
+  #   container_name: memorybun-grafana
+  #   ports:
+  #     - "3001:3000"
+  #   environment:
+  #     - GF_SECURITY_ADMIN_USER=admin
+  #     - GF_SECURITY_ADMIN_PASSWORD=memorybun
+  #     - GF_USERS_ALLOW_SIGN_UP=false
+  #   volumes:
+  #     - ./monitoring/grafana/provisioning:/etc/grafana/provisioning:ro
+  #     - grafana-data:/var/lib/grafana
+  #   depends_on:
+  #     - prometheus
+  #   networks:
+  #     - memorybun-network
+  #   restart: unless-stopped
+
+volumes:
+  redis-data:
+    driver: local
+  postgres-data:
+    driver: local
+  transcription-screenshots:
+    driver: local
+  transcription-audio:
+    driver: local
+  # prometheus-data:
+  #   driver: local
+  # grafana-data:
+  #   driver: local
+
+networks:
+  memorybun-network:
+    driver: bridge

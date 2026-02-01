@@ -1,0 +1,14 @@
+# Grafana Dashboard Provisioning
+# Auto-loads dashboards from the dashboards folder on startup
+
+apiVersion: 1
+
+providers:
+  - name: 'MemoryBun Dashboards'
+    orgId: 1
+    folder: ''
+    type: file
+    disableDeletion: false
+    editable: true
+    options:
+      path: /etc/grafana/provisioning/dashboards

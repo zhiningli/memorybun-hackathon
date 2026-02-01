@@ -1,0 +1,331 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "title": "Graph Plotting 1",
+      "question_details": "Plot function $f(x) = e^x$",
+      "think_time_limit_seconds": 20,
+      "record_time_limit_seconds": 60,
+      "instructions": [
+        "You will now have {thinkTime} to prepare. After that, you will have up to {recordTime} to record your verbal response and plot the function on the highlighted plot grid to the right. You may also use the white board to show any additional calculations or thoughts.",
+        "You can press the 'Record' button below when you're ready."
+      ],
+      "hints": [
+        {
+          "text": "Calculate the value of $e^x$ when $x$ equals to $0, 1, 2$...",
+          "image_url": null
+        }
+      ],
+      "question_image_url": null,
+      "subjects": [
+        "Mathematics"
+      ],
+      "topics": [
+        "Graph Plotting",
+        "Mathematics"
+      ],
+      "difficulty": "easy",
+      "rubric_id": 2,
+      "created_at": "2025-11-06T00:00:00Z",
+      "updated_at": "2025-11-06T00:00:00Z"
+    },
+    {
+      "id": 2,
+      "title": "Follow-up Question 1",
+      "question_details": "Plot function $f(x) = \\sin(x)$",
+      "think_time_limit_seconds": 20,
+      "record_time_limit_seconds": 60,
+      "instructions": [
+        "You will now have {thinkTime} to prepare. After that, you will have up to {recordTime} to record your verbal response and plot the function on the highlighted plot grid to the right. You may also use the white board to show any additional calculations or thoughts.",
+        "You can press the 'Record' button below when you're ready."
+      ],
+      "hints": [
+        {
+          "text": "Calculate the value of $\\sin(x)$ when $x$ equals to $0$, $\\frac{\\pi}{2}$, $\\pi$, $\\frac{3\\pi}{2}$, $2\\pi$...",
+          "image_url": null
+        }
+      ],
+      "question_image_url": null,
+      "subjects": [
+        "Mathematics"
+      ],
+      "topics": [
+        "Graph Plotting",
+        "Mathematics"
+      ],
+      "difficulty": "easy",
+      "rubric_id": 2,
+      "created_at": "2025-11-06T00:00:00Z",
+      "updated_at": "2025-11-06T00:00:00Z"
+    },
+    {
+      "id": 3,
+      "title": "Follow-up Question 2",
+      "question_details": "Plot function $f(x) = e^x \\cdot \\sin(x)$",
+      "think_time_limit_seconds": 30,
+      "record_time_limit_seconds": 90,
+      "instructions": [
+        "You will now have {thinkTime} to prepare. After that, you will have up to {recordTime} to record your verbal response and plot the function on the highlighted plot grid to the right. You may also use the white board to show any additional calculations or thoughts.",
+        "You can press the 'Record' button below when you're ready."
+      ],
+      "hints": [
+        {
+          "text": "Consider the behaviour of $f(x) = e^x$ and $f(x) = \\sin(x)$ when $x$ approaches $\\infty$ and $-\\infty$",
+          "image_url": null
+        }
+      ],
+      "question_image_url": null,
+      "subjects": [
+        "Mathematics"
+      ],
+      "topics": [
+        "Graph Plotting",
+        "Mathematics"
+      ],
+      "difficulty": "medium",
+      "rubric_id": 2,
+      "created_at": "2025-11-06T00:00:00Z",
+      "updated_at": "2025-11-06T00:00:00Z"
+    },
+    {
+      "id": 4,
+      "title": "Extension Question",
+      "question_details": "Plot function $f(x) = x \\cdot \\cos(x)$",
+      "think_time_limit_seconds": 40,
+      "record_time_limit_seconds": 90,
+      "instructions": [
+        "You will now have {thinkTime} to prepare. After that, you will have up to {recordTime} to record your verbal response and plot the function on the highlighted plot grid to the right. You may also use the white board to show any additional calculations or thoughts.",
+        "You can press the 'Record' button below when you're ready."
+      ],
+      "hints": [
+        {
+          "text": "Think about the behaviour of $f(x) = x \\cdot \\cos(x)$, try to plot the two individual functions $f(x) = x$ and $f(x) = \\cos(x)$ first",
+          "image_url": null
+        }
+      ],
+      "question_image_url": null,
+      "subjects": [
+        "Mathematics"
+      ],
+      "topics": [
+        "Graph Plotting",
+        "Mathematics"
+      ],
+      "difficulty": "hard",
+      "rubric_id": 2,
+      "created_at": "2025-11-06T00:00:00Z",
+      "updated_at": "2025-11-06T00:00:00Z"
+    },
+    {
+      "id": 5,
+      "title": "Graph Plotting",
+      "question_details": "Plot function $f(x) = x \\cdot \\sin(x)$",
+      "think_time_limit_seconds": 40,
+      "record_time_limit_seconds": 90,
+      "instructions": [
+        "You will now have {thinkTime} to prepare. After that, you will have up to {recordTime} to record your verbal response and plot the function on the highlighted plot grid to the right. You may also use the white board to show any additional calculations or thoughts.",
+        "You can press the 'Record' button below when you're ready."
+      ],
+      "hints": [
+        {
+          "text": "Think about the behaviour of $f(x) = x \\cdot \\sin(x)$, try to plot the two individual functions $f(x) = x$ and $f(x) = \\sin(x)$ first",
+          "image_url": null
+        }
+      ],
+      "question_image_url": null,
+      "subjects": [
+        "Mathematics"
+      ],
+      "topics": [
+        "Graph Plotting",
+        "Mathematics"
+      ],
+      "difficulty": "hard",
+      "rubric_id": 2,
+      "created_at": "2025-11-06T00:00:00Z",
+      "updated_at": "2025-11-06T00:00:00Z"
+    },
+    {
+      "id": 6,
+      "title": "Graph Plotting",
+      "question_details": "Plot function $f(x) = \\cos(2x) \\cdot e^{2x}$",
+      "think_time_limit_seconds": 40,
+      "record_time_limit_seconds": 90,
+      "instructions": [
+        "You will now have {thinkTime} to prepare. After that, you will have up to {recordTime} to record your verbal response and plot the function on the highlighted plot grid to the right. You may also use the white board to show any additional calculations or thoughts.",
+        "You can press the 'Record' button below when you're ready."
+      ],
+      "hints": [
+        {
+          "text": "Think about the behaviour of $f(x) = \\cos(2x) \\cdot e^{2x}$, try to plot the two individual functions $f(x) = \\cos(2x)$ and $f(x) = e^{2x}$ first",
+          "image_url": null
+        }
+      ],
+      "question_image_url": null,
+      "subjects": [
+        "Mathematics"
+      ],
+      "topics": [
+        "Graph Plotting",
+        "Mathematics"
+      ],
+      "difficulty": "hard",
+      "rubric_id": 2,
+      "created_at": "2025-11-06T00:00:00Z",
+      "updated_at": "2025-11-06T00:00:00Z"
+    },
+    {
+      "id": 7,
+      "title": "Follow-up Question 1",
+      "question_details": "Plot function $f(x) = \\cos(x)$",
+      "think_time_limit_seconds": 20,
+      "record_time_limit_seconds": 60,
+      "instructions": [
+        "You will now have {thinkTime} to prepare. After that, you will have up to {recordTime} to record your verbal response and plot the function on the highlighted plot grid to the right. You may also use the white board to show any additional calculations or thoughts.",
+        "You can press the 'Record' button below when you're ready."
+      ],
+      "hints": [
+        {
+          "text": "Calculate the value of $\\cos(x)$ when $x$ equals to $1$, $\\frac{\\pi}{2}$, $\\pi$, $\\frac{3\\pi}{2}$, $2\\pi$...",
+          "image_url": null
+        }
+      ],
+      "question_image_url": null,
+      "subjects": [
+        "Mathematics"
+      ],
+      "topics": [
+        "Graph Plotting",
+        "Mathematics"
+      ],
+      "difficulty": "easy",
+      "rubric_id": 2,
+      "created_at": "2025-11-06T00:00:00Z",
+      "updated_at": "2025-11-06T00:00:00Z"
+    },
+    {
+      "id": 8,
+      "title": "Fluid Dynamics 1",
+      "question_details": "We are given a rectangular shaped container with base Area $A_0$ and initial water level is $h$. The water is leaking out from the bottom of the container through a hole with area $A_1$. Find the time taken for the all water to leak out.",
+      "think_time_limit_seconds": 20,
+      "record_time_limit_seconds": 60,
+      "instructions": [
+        "You will now have {thinkTime} to prepare. After that, you will have up to {recordTime} to record your verbal response and plot the function on the highlighted plot grid to the right. You may also use the white board to show any additional calculations or thoughts.",
+        "You can press the 'Record' button below when you're ready."
+      ],
+      "hints": [
+        {
+          "text": "Consider using Bernoulli's equation and the continuity equation to solve this problem.",
+          "image_url": null
+        }
+      ],
+      "question_image_url": "/blob/question-images/fluid-dynamics-question-1.png",
+      "subjects": [
+        "Engineering",
+        "Physics"
+      ],
+      "topics": [
+        "Fluid Dynamics"
+      ],
+      "difficulty": "medium",
+      "rubric_id": 3,
+      "created_at": "2025-11-06T00:00:00Z",
+      "updated_at": "2025-11-06T00:00:00Z"
+    },
+    {
+      "id": 9,
+      "title": "Proof Torricelli's Law",
+      "question_details": "Starting with Bernoulli's Principle, derive Torricelli's Law for the efflux velocity $v$ of a fluid leaking from a small hole at the bottom of a tank with water height $h$. ",
+      "think_time_limit_seconds": 60,
+      "record_time_limit_seconds": 120,
+      "instructions": [
+        "You have {thinkTime} to prepare your derivation and strategy.",
+        "During the {recordTime} recording, verbally explain your proof using Bernoulli's equation and show the integration steps on the whiteboard to find the total time $T$.",
+        "Ensure you state any assumptions made regarding the hole size $A_1$ relative to $A_0$."
+      ],
+      "hints": [
+        {
+          "text": "Recall Bernoulli's Equation: $P + \\frac{1}{2}\\rho v^2 + \\rho gh = \\text{constant}$. For the leak time, use the continuity equation: $A_0 \\frac{dh}{dt} = -A_1 v$.",
+          "image_url": null
+        },
+        {
+          "text": "Think about how the rate of change of height depends on the square root of height.",
+          "image_url": null
+        }
+      ],
+      "question_image_url": "/blob/question-images/fluid-dynamics-question-1.png",
+      "subjects": [
+        "Engineering",
+        "Physics"
+      ],
+      "topics": [
+        "Fluid Dynamics"
+      ],
+      "difficulty": "hard",
+      "rubric_id": 4,
+      "created_at": "2026-01-04T00:00:00Z",
+      "updated_at": "2026-01-04T00:00:00Z"
+    },
+    {
+      "id": 10,
+      "title": "Resistors with Two Node Problem",
+      "question_details": "In the circuit shown, a $1\\,\\text{V}$ source drives a ladder network of $1\\,\\Omega$ resistors. The bottom rail is grounded. Calculate the voltage at the node labelled $V_x$ (with respect to ground).",
+      "think_time_limit_seconds": 60,
+      "record_time_limit_seconds": 120,
+      "instructions": [
+        "You have {thinkTime} to plan your approach (pick a method such as nodal analysis or equivalent resistance reduction). You can use the whiteboard to show your work.",
+        "During the {recordTime} recording, clearly label node voltages and reference ground.",
+        "Show a valid circuit-analysis method (recommended: nodal / KCL at $V_x$ and any additional nodes).",
+        "Carry the algebra through to a numerical value for $V_x$, and briefly sanity-check the result (for example, that $0 < V_x < 1\\,\\text{V}$)."
+      ],
+      "hints": [
+        {
+          "text": "Use nodal analysis: write KCL at $V_x$ and at the node(s) to the right. All resistors are $1\\,\\Omega$, so currents are simply voltage differences divided by resistance."
+        }
+      ],
+      "question_image_url": "/blob/question-images/resistors-with-two-nodes.png",
+      "subjects": [
+        "Engineering",
+        "Physics"
+      ],
+      "topics": [
+        "Circuit Analysis",
+        "Electricity"
+      ],
+      "difficulty": "medium",
+      "rubric_id": 4,
+      "created_at": "2026-01-04T00:00:00Z",
+      "updated_at": "2026-01-04T00:00:00Z"
+    },
+    {
+      "id": 11,
+      "title": "Rocket Momentum",
+      "question_details": "A rocket starts from rest in deep space. The rocket structure and systems have a mass of $500\\,\\text{kg}$ and it initially carries $500\\,\\text{kg}$ of fuel. When the engines are fired, fuel is ejected from the rocket at a constant speed of $100\\,\\text{m\\,s}^{-1}$ relative to the rocket. How fast will the rocket be moving when all the fuel has been used up?",
+      "think_time_limit_seconds": 90,
+      "record_time_limit_seconds": 180,
+      "instructions": [
+        "You have {thinkTime} to plan your solution strategy and identify the key equations.",
+        "During the {recordTime} recording, derive the rocket equation using conservation of momentum.",
+        "Clearly define the system mass at times $t$ and $t+dt$, and explain the sign convention for the exhaust velocity.",
+        "Show the integration steps leading to the final velocity expression $v_f$."
+      ],
+      "hints": [
+        {
+          "text": "Consider an infinitesimal time interval $dt$ and apply conservation of momentum to the combined system of the rocket and the expelled fuel."
+        }
+      ],
+      "question_image_url": "/blob/question-images/rocket-momentum.png",
+      "subjects": [
+        "Engineering",
+        "Physics"
+      ],
+      "topics": [
+        "Dynamics"
+      ],
+      "difficulty": "hard",
+      "rubric_id": 4,
+      "created_at": "2026-01-04T00:00:00Z",
+      "updated_at": "2026-01-04T00:00:00Z"
+    }
+  ]
+}

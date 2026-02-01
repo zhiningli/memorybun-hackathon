@@ -1,0 +1,26 @@
+# Prometheus Configuration for MemoryBun Backend
+# Scrape interval: 60s (MVP - reduces overhead)
+
+global:
+  scrape_interval: 60s      # How often to scrape targets (60s for MVP)
+  evaluation_interval: 60s  # How often to evaluate rules
+
+# Scrape configurations
+scrape_configs:
+  # Question Service - serves questions, answers, rubrics
+  - job_name: 'question_service'
+    static_configs:
+      - targets: ['question-service:8000']
+    metrics_path: /metrics
+
+  # Transcription Service - audio transcription with Whisper
+  - job_name: 'transcription_service'
+    static_configs:
+      - targets: ['transcription-service:8001']
+    metrics_path: /metrics
+
+  # Grading Service - LLM-based grading
+  - job_name: 'grading_service'
+    static_configs:
+      - targets: ['grading-service:8002']
+    metrics_path: /metrics
