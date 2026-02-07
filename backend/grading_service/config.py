@@ -36,13 +36,13 @@ class Settings(BaseSettings):
     # LLM Configuration
     mock_llm_response: bool = False
     llm_provider: str = "gemini"
-    llm_model: str = "gemini-2.5-flash"
+    llm_model: str = "gemini-3-flash-preview"
     llm_temperature: float = 0.3
     llm_max_tokens: int = 5000
     
     # Summary LLM Configuration
     summary_llm_provider: str = "gemini"
-    summary_llm_model: str = "gemini-2.5-flash-lite"
+    summary_llm_model: str = "gemini-3-flash-preview"
     summary_llm_temperature: float = 0.3
     summary_llm_max_tokens: int = 5000
     
